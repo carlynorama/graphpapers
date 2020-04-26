@@ -1,6 +1,6 @@
 width_in = 8.5
 height_in = 11
-divisions_per_inch=4
+divisions_per_inch = 4
 offsetX = 0
 offsetY = 0
 radius = 0.015625#0.03125
@@ -15,7 +15,7 @@ point_style = "fill:rgb(200,200,200);"
 f = open('helloworld.svg','w')
 f.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
 f.write('<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n')
-f.write(f'<svg width="{width_in}in" height="{width_in}in" xmlns="http://www.w3.org/2000/svg">\n')
+f.write(f'<svg width="{width_in}in" height="{height_in}in" xmlns="http://www.w3.org/2000/svg">\n')
 
 for y in range(0,y_count):
     y_cord = offsetY+(y*(y_spacing))
