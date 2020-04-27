@@ -1,6 +1,6 @@
 width_in = 8.5
 height_in = 11
-divisions_per_inch = 4
+divisions_per_inch = 5
 offsetX = 0
 offsetY = 0
 radius = 0.015625#0.03125
