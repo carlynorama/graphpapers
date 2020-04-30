@@ -1,7 +1,5 @@
 import math
 
-save_file_name = "pattern"
-
 def triangle(origin_x, origin_y):
       A_x = triangle_half_base + origin_x
       A_y = origin_y
@@ -14,9 +12,13 @@ def triangle(origin_x, origin_y):
       f.write('\t<line x1="%s" y1="%s" x2="%s" y2="%s" style="%s" />\n' % (B_x, B_y, C_x, C_y, line_style))
       f.write('\t<line x1="%s" y1="%s" x2="%s" y2="%s" style="%s" />\n' % (C_x, C_y, A_x, A_y, line_style))
 
-
-viewBoxWidth = 300
-viewBoxHeight = 550
+viewBoxWidth = 2550
+viewBoxHeight = 3300
+#width_in = 8.5
+#height_in = 11
+divisions_per_inch = 5
+offsetX = 0
+offsetY = 0
 
 # half an equalteral triangle is a 30-60-90 triangle
 # length of base = x
@@ -25,15 +27,22 @@ viewBoxHeight = 550
 # height of an equalat. given the side length a -> h = math.sqrt(3) / 2 * a
 
 
-triangle_side = float(10)
+triangle_side = float(viewBoxWidth/(8.5*divisions_per_inch))
 triangle_height = float(float(math.sqrt(3)) * triangle_side * float(0.5))
 triangle_half_base = float(triangle_side/2)
 home_x = 0
 home_y = 0
 
+save_file_directory = "papers"
+save_file_name = "triangle_lines_" + str(divisions_per_inch) + "_per_inch"
+save_file_full_path = save_file_directory + "/" + save_file_name
+
+
+
+
 line_style = "stroke:rgb(0,0,0);stroke-width:0.5"
 
-f = open('%s.svg' % save_file_name, 'w')
+f = open('%s.svg' % save_file_full_path, 'w')
 f.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
 f.write('<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n')
 
