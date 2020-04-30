@@ -50,8 +50,8 @@ f.write('<svg width="100%%" height="100%%" viewBox="0 0 %s %s" xmlns="http://www
 
 f.write('<g id="triangle mesh" transform="translate(%s, %s)">\n' % ("0", "0"))
 
-for r in range(50):
-    for c in range(50):
+for r in range(int(viewBoxHeight/triangle_height)):
+    for c in range(int(viewBoxWidth/triangle_side)):
         start_x = float(float(triangle_side*c) + float(r%2 * triangle_half_base))
         start_y = float(triangle_height*r)
         triangle(start_x, start_y)
