@@ -3,7 +3,7 @@ height_in = 11
 divisions_per_inch = 5
 offsetX = 0
 offsetY = 0
-radius = 0.015625#0.03125
+radius = 0.015625#1/64th
 
 save_file_directory = "papers"
 save_file_name = "grid_dots_" + str(divisions_per_inch) + "_per_inch"
