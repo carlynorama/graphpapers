@@ -32,7 +32,7 @@ def polygon(center_x, center_y, this_radius, number_verts):
         radians = math.radians(a*degree_step) + radial_offset
         my_points.append(get_vertex(center_x, center_y, this_radius, radians))
     poly_points = get_poly_points_string(my_points)
-    f.write(f'\t<polygon points="{poly_points}" style="fill:lime;stroke:purple;stroke-width:1"/>\n')
+    f.write(f'\t<polygon points="{poly_points}" style="{trace_style}"/>\n')
 
 
 def get_poly_points_string(points_array):
@@ -48,7 +48,7 @@ save_file_directory = "papers"
 save_file_name = "polyshape_" + str(number_verts) + "_sides"
 save_file_full_path = save_file_directory + "/" + save_file_name
 
-trace_style = "stroke: rgb(200,200,200); fill: none;"
+trace_style = "stroke: rgb(200,200,200); stroke-width:4; fill: none;"
 
 f = open('%s.svg' % save_file_full_path, 'w')
 f.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
