@@ -17,8 +17,8 @@ y_cord = centerY
 
 
 def circle_at_angle(tangent_point_x, tangent_point_y, my_radius, angle):
-    circle_x = math.cos(math.radians(angle))*radius + tangent_point_x
-    circle_y = math.sin(math.radians(angle))*radius + tangent_point_y
+    circle_x = math.cos(math.radians(angle))*my_radius + tangent_point_x
+    circle_y = math.sin(math.radians(angle))*my_radius + tangent_point_y
     f.write(f'\t<circle cx="{circle_x}in" cy="{circle_y}in" r="{my_radius}in" style="{trace_style}"/>\n')
 
 
