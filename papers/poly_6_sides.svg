@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="8.5in" height="11in"  xmlns="http://www.w3.org/2000/svg">
+	<line x1="4.25in" y1="3.4375in" x2="6.036177395305405in" y2="4.46875in" style="stroke: rgb(200,200,200); fill: none;"/>
+	<line x1="6.036177395305405in" y1="4.46875in" x2="6.036177395305405in" y2="6.53125in" style="stroke: rgb(200,200,200); fill: none;"/>
+	<line x1="6.036177395305405in" y1="6.53125in" x2="4.25in" y2="7.5625in" style="stroke: rgb(200,200,200); fill: none;"/>
+	<line x1="4.25in" y1="7.5625in" x2="2.4638226046945957in" y2="6.531250000000001in" style="stroke: rgb(200,200,200); fill: none;"/>
+	<line x1="2.4638226046945957in" y1="6.531250000000001in" x2="2.4638226046945952in" y2="4.46875in" style="stroke: rgb(200,200,200); fill: none;"/>
+	<line x1="2.4638226046945952in" y1="4.46875in" x2="4.25in" y2="3.4375in" style="stroke: rgb(200,200,200); fill: none;"/>
+</svg>
