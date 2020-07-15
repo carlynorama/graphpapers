@@ -7,13 +7,13 @@ viewBoxWidth = width_in * pxPerInch
 viewBoxHeight = height_in * pxPerInch
 
 
-x_spacing = (viewBoxWidth/8.5) * 0.25
+x_spacing = 150
 y_spacing = x_spacing
 
 x_count = int(viewBoxWidth/x_spacing)
 y_count = int(viewBoxHeight/y_spacing)
 
-number_verts = 6
+number_verts = 5
 radial_offset = math.radians(-90)
 offsetX = 0.25 * pxPerInch
 offsetY = 0.25 * pxPerInch
@@ -60,7 +60,7 @@ for row in range(0,y_count):
     for col in range(0, x_count):
         y_cord = offsetY+(row*(y_spacing))
         x_cord = offsetX+(col*(x_spacing)) + (row%2 * x_spacing/2)
-        polygon(x_cord, y_cord, 100, number_verts)
+        polygon(x_cord, y_cord, x_spacing/2, number_verts)
 
 f.write('</svg>')
 f.close()
