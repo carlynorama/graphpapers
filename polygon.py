@@ -20,12 +20,12 @@ def get_vertex(x, y, my_radius, angle_radians):
     end_y = math.sin(angle_radians)*my_radius + y
     return (end_x, end_y)
 
-def polygon(center_x, center_y, ext_radius, number_verts):
+def polygon(center_x, center_y, this_radius, number_verts):
     degree_step = float(360/number_verts)
     my_points = []
     for a in range(0, number_verts):
         radians = math.radians(a*degree_step) + radial_offset
-        my_points.append(get_vertex(center_x, center_y, radius, radians))
+        my_points.append(get_vertex(center_x, center_y, this_radius, radians))
     start_x = my_points[0][0]
     start_y = my_points[0][1]
     for i in range(1,number_verts):
