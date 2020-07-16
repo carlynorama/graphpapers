@@ -47,7 +47,7 @@ def clean_tup(tuple):
 
 
 save_file_directory = "papers"
-save_file_name = "grid_poly_" + str(number_verts) + "_sides_" + str(polys_per_inch) + "_per_inch"
+save_file_name = "tiles_poly_" + str(number_verts) + "_sides_" + str(polys_per_inch) + "_per_inch"
 save_file_full_path = save_file_directory + "/" + save_file_name
 
 poly_style = "stroke: rgb(200,200,200); stroke-width:0.; fill: none;"
