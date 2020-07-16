@@ -3,24 +3,36 @@ height_in = 11
 divisions_per_inch = 5
 offsetX = 0
 offsetY = 0
+
+#radius = 0.015625#1/64th
 padding = 0.015625
 tight_packed = True
-#radius = 0.015625#1/64th
-
-save_file_directory = "papers"
-if tight_packed:
-    save_file_name = "packed_circles_" + str(divisions_per_inch) + "_per_inch"
-else:
-    save_file_name = "grid_circles_" + str(divisions_per_inch) + "_per_inch"
-save_file_full_path = save_file_directory + "/" + save_file_name
-#margin = 0.5
-#spacing = radius*2 + margin
 x_spacing = 1/divisions_per_inch
 y_spacing = x_spacing
 radius = (x_spacing/2)-padding
 x_count = int(width_in * divisions_per_inch)
 y_count = int(height_in * divisions_per_inch)
 trace_style = "stroke: rgb(200,200,200); fill: none;"
+
+
+
+save_file_directory = "papers"
+if tight_packed:
+    save_file_name = "packed_circles_"
+else:
+    save_file_name = "grid_circles_"
+
+if padding > 0:
+    save_file_name = save_file_name + "p_"
+else:
+    save_file_name = save_file_name + "o_"
+
+save_file_name = save_file_name + str(divisions_per_inch) + "_per_inch"
+
+save_file_full_path = save_file_directory + "/" + save_file_name
+#margin = 0.5
+#spacing = radius*2 + margin
+
 
 f = open('%s.svg' % save_file_full_path, 'w')
 f.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
