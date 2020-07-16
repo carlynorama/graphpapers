@@ -11,7 +11,7 @@ def radial_burst(cx, cy, number_of_rays, exterior_radius, interior_offset):
     degree_step = float(float(360)/number_of_rays)
     f.write(f'\t<g>\n')
     for a in range(0, number_of_rays):
-        radians = math.radians(float(a)*degree_step) #+ radial_offset
+        radians = math.radians(float(a)*degree_step) + radial_offset
         interior_x = math.cos(radians)*float(interior_offset) + float(cx)
         interior_y = math.sin(radians)*float(interior_offset) + float(cy)
         line_at_angle(float(interior_x), float(interior_y), float(line_length), radians)
@@ -35,14 +35,16 @@ offsetY = float(0)
 x_count = int(viewBoxWidth/x_spacing)
 y_count = int(viewBoxHeight/y_spacing)
 
-number_of_verts = 6
-vert_radius = float(x_spacing)
+number_of_verts = 5
+vert_radius = float(x_spacing)/4.0
+radial_offset = math.radians(-90)
 
 
 save_file_directory = "papers"
 save_file_name = "vert_grid2_" + str(number_of_verts) + "_radials"
 if tight_packed:
     save_file_name = save_file_name + "_tp"
+save_file_name = save_file_name + "_" + str(int(vert_radius)) + "_radius"
 save_file_full_path = save_file_directory + "/" + save_file_name
 
 
