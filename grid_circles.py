@@ -6,7 +6,7 @@ offsetY = 0
 #radius = 0.015625#1/64th
 
 save_file_directory = "papers"
-save_file_name = "circles_" + str(divisions_per_inch) + "_per_inch"
+save_file_name = "grid_circles_" + str(divisions_per_inch) + "_per_inch"
 save_file_full_path = save_file_directory + "/" + save_file_name
 #margin = 0.5
 #spacing = radius*2 + margin
