@@ -5,16 +5,15 @@ offsetX = 0
 offsetY = 0
 
 #radius = 0.015625#1/64th
-padding = 0.015625
-tight_packed = True
+
 x_spacing = 1/divisions_per_inch
 y_spacing = x_spacing
+padding = -(x_spacing/2) #0.015625
+tight_packed = True
 radius = (x_spacing/2)-padding
 x_count = int(width_in * divisions_per_inch)
 y_count = int(height_in * divisions_per_inch)
 trace_style = "stroke: rgb(200,200,200); fill: none;"
-
-
 
 save_file_directory = "papers"
 if tight_packed:
@@ -24,6 +23,8 @@ else:
 
 if padding > 0:
     save_file_name = save_file_name + "p_"
+if padding == -(x_spacing/2):
+    save_file_name = save_file_name + "fol_"
 else:
     save_file_name = save_file_name + "o_"
 
