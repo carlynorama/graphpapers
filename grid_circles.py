@@ -3,6 +3,7 @@ height_in = 11
 divisions_per_inch = 5
 offsetX = 0
 offsetY = 0
+padding = 0.015625
 #radius = 0.015625#1/64th
 
 save_file_directory = "papers"
@@ -12,7 +13,7 @@ save_file_full_path = save_file_directory + "/" + save_file_name
 #spacing = radius*2 + margin
 x_spacing = 1/divisions_per_inch
 y_spacing = x_spacing
-radius = x_spacing/2
+radius = (x_spacing/2)-padding
 x_count = int(width_in * divisions_per_inch)
 y_count = int(height_in * divisions_per_inch)
 trace_style = "stroke: rgb(200,200,200); fill: none;"
