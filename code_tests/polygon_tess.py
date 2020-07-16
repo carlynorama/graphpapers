@@ -13,7 +13,7 @@ y_spacing = x_spacing
 x_count = int(viewBoxWidth/x_spacing)
 y_count = int(viewBoxHeight/y_spacing)
 
-number_verts = 5
+number_verts = 4 #(3, 4 or 6)
 radial_offset = math.radians(-90)
 offsetX = 0.25 * pxPerInch
 offsetY = 0.25 * pxPerInch
@@ -45,7 +45,7 @@ def clean_tup(tuple):
 #radius = 0.015625#1/64th
 
 save_file_directory = "papers"
-save_file_name = "polygrid_" + str(number_verts) + "_sides"
+save_file_name = "polytess_" + str(number_verts) + "_sides"
 save_file_full_path = save_file_directory + "/" + save_file_name
 
 trace_style = "stroke: rgb(200,200,200); stroke-width:4; fill: none;"
