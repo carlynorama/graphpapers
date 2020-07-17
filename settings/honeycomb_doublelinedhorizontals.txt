@@ -1,0 +1,12 @@
+polys_per_inch = 3
+spacer = False
+spacer_height = 0
+tight_packed = True
+vertical_snuggle = True
+padding = 0#float(x_spacing/10)
+size = (pxPerInch/float(polys_per_inch) - padding)
+
+number_verts = 6
+rotation = math.radians(360.0/float(number_verts)/2.0)
+offsetX = 0
+offsetY = 0

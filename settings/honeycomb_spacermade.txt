@@ -1,0 +1,19 @@
+poly_style = "stroke: rgb(50,50,50); stroke-width:3.0; fill: none;"
+line_style = "stroke: rgb(50,50,50); stroke-width:3.0;"
+
+polys_per_inch = 3
+spacer = True
+spacer_height = 0
+tight_packed = False
+vertical_snuggle = False
+padding = 0#float(x_spacing/10)
+size = (pxPerInch/float(polys_per_inch) - padding)
+
+
+
+number_verts = 6
+#rotation = math.radians(-90)
+#rotation = math.radians(360.0/float(number_verts))
+rotation = math.radians(360.0/float(number_verts)/2.0)
+offsetX = 0
+offsetY = 0
