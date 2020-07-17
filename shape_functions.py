@@ -15,7 +15,6 @@ def polygon(center_x, center_y, this_radius, number_verts):
     poly_points = get_poly_points_string(my_points)
     f.write(f'\t<polygon points="{poly_points}" style="{dot_style}"/>\n')
 
-
 def get_poly_points_string(points_array):
     points_string = " ".join(map(clean_tup, points_array))
     return points_string
