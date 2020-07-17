@@ -20,7 +20,7 @@ tight_packed = True
 draw_radials = "both" #both, AC, BD, none
 vertical_snuggle = True
 
-rotation = math.radians(0)
+rotation = math.radians(45.0)
 offsetX = 0
 offsetY = 0
 
