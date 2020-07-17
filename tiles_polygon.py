@@ -7,17 +7,20 @@ height_in = float(11)
 viewBoxWidth = width_in * pxPerInch
 viewBoxHeight = height_in * pxPerInch
 
-polys_per_inch = 4
-spacer = False
+poly_style = "stroke: rgb(50,50,50); stroke-width:3.0; fill: none;"
+line_style = "stroke: rgb(50,50,50); stroke-width:3.0;"
+
+polys_per_inch = 3
+spacer = True
 spacer_height = 0
-tight_packed = True
-vertical_snuggle = True
+tight_packed = False
+vertical_snuggle = False
 padding = 0#float(x_spacing/10)
 size = (pxPerInch/float(polys_per_inch) - padding)
 
 
 
-number_verts = 12
+number_verts = 6
 #rotation = math.radians(-90)
 #rotation = math.radians(360.0/float(number_verts))
 rotation = math.radians(360.0/float(number_verts)/2.0)
@@ -114,9 +117,6 @@ if vertical_snuggle:
 save_file_name = save_file_name + "_" + str(int(math.degrees(rotation))) + "_deg"
 
 save_file_full_path = save_file_directory + "/" + save_file_name
-
-poly_style = "stroke: rgb(200,200,200); stroke-width:0.; fill: none;"
-line_style = "stroke: rgb(200,200,200); stroke-width:0.;"
 
 f = open('%s.svg' % save_file_full_path, 'w')
 f.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
